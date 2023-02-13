@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <title>ChatBot | Weather</title>
+    <script src="https://kit.fontawesome.com/6c73464d06.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="top_arrows_position" id="top_arrow">
+            <img src="{{ url_for('static', filename='top_msg.svg')}}" alt="">
+        </div>
+        <div id="bot_modal" class="modal">
+            <div class="modal_content" id="modal_inner_data">
+                <div id="weather_list"></div>
+                <div id="all_weather_details" class="weather_card_container">
+                    <div class="weather-side">
+                        <div class="current-card">
+                            <div id="latest_time_card_side" class="current-cond heading-weather-side"></div>
+                            <div class="current-temp subheading-weather-side">Temperature</div>
+                            <div id="current_temp" class="current-temp-digit weather-main-digit"></div>
+                            <div class="current-feels subheading-weather-side">Feels Like</div>
+                            <div id="current_feels" class="current-feels-digit weather-main-digit"></div>
+                            <div id="current_icon" class="current-icon"></div>
+                            <div id="current_words" class="current-words weather-side-desc"></div>
+                        </div>
+                        <div class="throughout-card">
+                            <div class="throughout-cond heading-weather-side">Throughout the Day</div>
+                            <div id="through_icon" class="throughout-icon"></div>
+                            <div id="through_words" class="throughout-word weather-side-desc"></div>
+                            <div id="sunrise" class="sunrise-time heading-weather-side"></div>
+                            <img class="sunrise-icon" src="{{ url_for('static', filename='/weather icons/sunrise.svg')}}" alt="">
+                            <div id="sunset" class="sunset-time heading-weather-side"></div>
+                            <img class="sunset-icon" src="{{ url_for('static', filename='/weather icons/sunset.svg')}}" alt="">
+                            <div class="throughout-temp subheading-weather-side">Temperature</div>
+                            <div id="through_temp" class="throughout-temp-digit weather-main-digit"></div>
+                            <div class="throughout-feels subheading-weather-side">Feels Like</div>
+                            <div id="through_feels" class="throughout-feels-digit weather-main-digit"></div>
+                            <div class="temp-max-min">
+                                <img class="max-arrow-temp" src="{{ url_for('static', filename='/weather icons/max-arrow.svg')}}" alt="">
+                                <div id="through_temp_max" class="max-temp-digit"></div>
+                                <img class="min-arrow-temp" src="{{ url_for('static', filename='/weather icons/min-arrow.svg')}}" alt="">
+                                <div id="through_temp_min" class="min-temp-digit"></div>
+                            </div>
+                            <div class="feels-max-min">
+                                <img class="max-arrow-feels" src="{{ url_for('static', filename='/weather icons/max-arrow.svg')}}" alt="">
+                                <div id="through_feels_max" class="max-feels-digit"></div>
+                                <img class="min-arrow-feels" src="{{ url_for('static', filename='/weather icons/min-arrow.svg')}}" alt="">
+                                <div id="through_feels_min" class="min-feels-digit"></div>
+                            </div>
+                        </div>
+                        <div class="location-card">
+                            <img class="location-icon" src="{{ url_for('static', filename='/weather icons/location-icon.svg')}}" alt="">
+                            <div id="location_address" class="location-details"></div>
+                            <div id="location_lat_long" class="coordinates_pos location-sub-details"></div>
+                            <div id="location_timezone" class="timezone_pos location-sub-details"></div>
+                            <div id="datetime" class="datetime_pos location-sub-details"></div>
+                        </div>
+                    </div>
+                    <div class="other-details-side">
+                        <div id="guide_details" class="icon-desc"></div>
+                        <div class="other-weather-details">
+                            <div class="humidity_heading other_headings">Relative Humidity</div>
+                            <div id="humidity" class="humidity_details other_details"></div>
+                            <div class="solar_energy_heading other_headings">Solar Energy</div>
+                            <div id="solar_energy" class="solar_energy_details other_details"></div>
+                            <div class="wind_speed_heading other_headings">Wind Speed</div>
+                            <div id="wind_speed" class="wind_speed_details other_details"></div>
+                            <div class="cloud_cover_heading other_headings">Cloud Cover</div>
+                            <div id="cloud_cover" class="cloud_cover_details other_details"></div>
+                            <div class="pressure_heading other_headings">Sea Level Pressure</div>
+                            <div id="pressure" class="pressure_details other_details"></div>
+                            <div class="solar_radi_heading other_headings">Solar Radiation</div>
+                            <div id="solar_radi" class="solar_radi_details other_details"></div>
+                            <div class="wind_gust_heading other_headings">Wind Gust</div>
+                            <div id="wind_gust" class="wing_gust_details other_details"></div>
+                            <div class="snow_heading other_headings">Snow</div>
+                            <div id="snow" class="snow_details other_details"></div>
+                            <div class="visibility_heading other_headings">Visibility</div>
+                            <div id="visibility" class="visibility_details other_details"></div>
+                            <div class="uv_heading other_headings">UV Index</div>
+                            <div id="uv_index" class="uv_details other_details"></div>
+                            <div class="wind_dir_heading other_headings">Wind Direction</div>
+                            <div id="wind_dir" class="wind_dir_details other_details"></div>
+                            <div class="wind_dir_exp">* It’s calculated from true north</div>
+                            <div class="snow_depth_heading other_headings">Snow Depth</div>
+                            <div id="snow_depth" class="snow_depth_details other_details"></div>
+                            <div class="precip_heading other_headings">Precipitation</div>
+                            <div id="precip" class="precip_details other_details"></div>
+                            <div class="precip_type_heading other_headings">Precipitation Type</div>
+                            <div id="precip_type" class="precip_type_details other_details"></div>
+                            <div id="moon_icon" class="moon_icon"></div>
+                            <div id="moon_name" class="moon_name other_details"></div>
+                        </div>
+                        <div id="weather_desc" class="weather_description"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <iframe src="{{url_for('chat_body')}}" id="popup1" class="iframe_display">
+        </iframe>
+        <div id="design_button">
+            <button type="button" onclick="counter()" class="btn_start" id="change_button">
+                <img id="chat_button" src="{{ url_for('static', filename='weather_bot_icon.svg')}}" alt="">
+            </button>
+        </div>
+        <img class="bottom_arrows_position" id="bottom_arrow" src="{{ url_for('static', filename='bottom_msg.svg')}}" alt="">
+    </div>
+</body>
+<script>
+    let count_popup = 0;
+    function counter(){
+        if (count_popup === 0) {
+            document.getElementById('bottom_arrow').style.display = "inline-block";
+            document.getElementById('top_arrow').style.display = "inline-block";
+        }else {
+            document.getElementById('bottom_arrow').style.display = "none";
+            document.getElementById('top_arrow').style.display = "none";
+        }
+        if (count_popup%2 === 0){
+           document.getElementById('popup1').style.display = "inline-block";
+           document.getElementById('change_button').style.cssText = "background-color: white; border-radius: 0 0 1vmin 1vmin; box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.3); color: #F55454FF";
+           const element = document.getElementById("chat_button");
+           element.remove()
+           document.getElementById('change_button').innerHTML += `<i id="change_icon" class="fa-regular fa-circle-xmark"></i>`;
+           document.getElementById('change_button').className = "btn_start start_chat_button";
+        }
+        else {
+           document.getElementById('popup1').style.display = "none";
+           document.getElementById('change_button').style.cssText = "background-color: #03830CFF; border-radius: 1vmin; box-shadow: 0 0 1.5vmin 0.2vmin rgba(0, 0, 0, 0.452);";
+           const element = document.getElementById("change_icon");
+           element.remove()
+           document.getElementById('change_button').innerHTML += `<img id="chat_button" src="../static/weather_bot_icon.svg" alt="">`;
+           document.getElementById('change_button').className = "btn_start";
+        }
+        count_popup += 1;
+    }
+    function modal_send_onclick(){
+        var checkboxes = parent.document.getElementsByName("more_details");
+        var checkboxesChecked = [];
+        for (var i=0; i<checkboxes.length; i++) {
+            if (checkboxes[i].checked) {
+                checkboxesChecked.push(checkboxes[i].id);
+            }
+        }
+        const check_box_list = checkboxesChecked.length > 0 ? checkboxesChecked : null
+        if (check_box_list == null){
+            console.log("select at least one")
+        }
+        else {
+            bot_modal.style.display = "none";
+            const weather_list = parent.document.getElementById("weather_list");
+            document.getElementById('popup1').contentWindow.modal_send_data_function(check_box_list);
+            weather_list.innerHTML = ''
+        }
+    }
+</script>
+</html>

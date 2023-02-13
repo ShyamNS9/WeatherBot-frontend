@@ -1,0 +1,1251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: rgba(224, 234, 234, 0.75);
+}
+
+.content {
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+    border-radius: 0.7vw;
+    min-width: 22vw;
+    min-height: 37vh;
+    margin: auto;
+}
+
+.form_style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_style > h1 {
+    padding: 0.5vh 0.5vw;
+}
+
+.form_style > input {
+    margin: 0.5vh 0.5vw;
+    outline: none;
+}
+
+.form_style > button {
+    min-height: 5vh;
+    min-width: 5vw;
+    margin: 1vh 0.5vw;
+    border: none;
+    background-color: #03830CFF;
+    color: rgb(255, 255, 255);
+    padding: 0.45vh 0.45vw;
+    font-size: 1vw;
+    border-radius: 1vmin;
+}
+
+.btn_form_extra:hover {
+    opacity: 90%;
+}
+
+.btn_form_extra:active {
+    opacity: 80%;
+}
+
+.rectangle {
+    width: 22vw;
+    height: 70vh;
+    display: inline-block;
+    border-radius: 0.7vw 0.7vw 0.7vw 0.7vw;
+    background-color: #ffffff;
+    box-shadow: 0 0 1.5vmin 0.2vmin rgba(0, 0, 0, 0.452);
+}
+
+#top_arrow {
+    display: none;
+}
+
+#bottom_arrow {
+    display: none;
+}
+
+.top_arrows_position {
+    position: absolute;
+    right: 30px;
+    bottom: 698px;
+}
+
+.bottom_arrows_position {
+    position: absolute;
+    right: 425px;
+    bottom: 94px;
+}
+
+#popup1 {
+    display: none;
+}
+
+#design_button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 1vw 2vh 0;
+}
+
+#design_button:hover {
+    opacity: 97%;
+}
+
+#design_button:active {
+    opacity: 92%;
+}
+
+.btn_start {
+    position: relative;
+    min-width: 3.5vw;
+    min-height: 6.5vh;
+    outline: none;
+    border: none;
+    background-color: #03830CFF;
+    color: rgb(255, 255, 255);
+    padding: 0;
+    font-size: 1.8vw;
+    border-radius: 1vmin;
+    box-shadow: 0 0 1.5vmin 0.2vmin rgba(0, 0, 0, 0.452);
+}
+
+.btn_start > img {
+    padding-top: 0.5vh;
+    height: 50px;
+    width: 47px;
+}
+
+#change_button.start_chat_button::before {
+    content: "";
+    /* z-index: 0; */
+    position: absolute;
+    background-color: transparent;
+    right: 3.5vw;
+    bottom: 4.5vh;
+    min-width: 2vw;
+    min-height: 2vh;
+    border-radius: 0 13px 0 0;
+    box-shadow: 0.7vw 0 0 white;
+}
+
+/*#design_button.start_chat_button:after {*/
+/*    position: relative;*/
+/*    content: "";*/
+/*    background-color: transparent;*/
+/*    border-radius: 0 1.5vmin 0 0;*/
+/*    box-shadow: -3.5vw 0 0 #000000;*/
+/*}*/
+.iframe_display {
+    position: absolute;
+    bottom: 8.5vh;
+    right: 0;
+    margin: 0 1vw 0 0;
+    width: 400px;
+    height: 620px;
+    box-shadow: 0 0 1.5vmin 0.2vmin rgba(0, 0, 0, 0.452);
+    border-radius: 0.5vw 0.5vw 0 0.5vw;
+    overflow: hidden;
+    border: none;
+}
+
+.upper_body {
+    font-size: 2vh;
+    min-height: 6.3vh;
+    min-width: 22vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border-top-left-radius: 0.7vw;
+    border-top-right-radius: 0.7vw;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #919191;
+}
+
+.upper_body_name > h3 {
+    margin: 0.5vh 0 0 0.5vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bot_icon {
+    margin: 0 0 0 1vw;
+}
+
+.bot_icon > img {
+    height: 55px;
+    width: 50px;
+}
+
+.upper_body_name {
+    display: flex;
+    align-items: center;
+}
+
+.reset_button {
+    padding: 0;
+    margin: 0.5vh 0 0 0;
+    font-size: 21px;
+    border: none;
+    color: black;
+    border-radius: 2vmin;
+    background-color: white;
+    cursor: pointer;
+}
+
+.last_button {
+    margin: 0.5vh 1vw 0 0;
+}
+
+.reset_button:hover {
+    /*border: 2px solid #424242;*/
+    /*background-color: #ddd;*/
+    color: #0069ff;
+}
+
+.reset_button:active {
+    /*border: 2px solid #313131;*/
+    /*background-color: #b7b7b7;*/
+    color: #0053d0;
+}
+
+.middle_body {
+    box-sizing: border-box;
+    /*font-family: "Open Sans", sans-serif;*/
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    display: block;
+    height: 57.7vh;
+    min-width: 21vw;
+    background-color: white;
+    padding: 0.5vh 0.5vw;
+    overflow-y: scroll;
+    /*margin-top: 1vh;*/
+    transition: 0.2s;
+}
+
+.middle_body::-webkit-scrollbar {
+    overflow-y: hidden;
+    width: 0;
+}
+
+/*.middle_body > p {*/
+/*    margin: 0;*/
+/*}*/
+.clearfix {
+    margin: 1px 0;
+    clear: both;
+}
+
+.userMsg {
+    animation: animateElement linear 0.2s;
+    animation-iteration-count: 1;
+    margin: 5px 0;
+    word-wrap: break-word;
+    padding: 10px 10px 10px 15px;
+    float: right;
+    background: rgb(0, 83, 208);
+    color: white;
+    max-width: 65%;
+    min-width: 15%;
+    border-radius: 20px 5px 16px 20px;
+    /* box-shadow: 0px 2px 5px 0px #9a828454; */
+}
+
+.botMsg {
+    animation: animateElement linear 0.2s;
+    animation-iteration-count: 1;
+    margin: 5px 0;
+    word-wrap: break-word;
+    padding: 10px;
+    float: left;
+    background: rgb(18, 30, 42);
+    color: white;
+    max-width: 60%;
+    min-width: 25%;
+    border-radius: 5px 20px 20px 16px;
+}
+
+.botMsg > p {
+    margin: 0;
+    word-wrap: break-word;
+    padding: 0;
+}
+
+/* css for botTyping */
+
+.botTyping {
+    float: left;
+    margin-top: 5px;
+    background: rgb(18, 30, 42);
+    color: white;
+    padding: 10px 5px 10px 20px;
+    border-radius: 5px 20px 20px 16px;
+    max-width: 60%;
+    min-width: 20%;
+}
+
+.botTyping > div {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    margin-right: 5px;
+}
+
+.botTyping .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.bot_msg_button {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.menu_checkbox {
+    min-width: 46px;
+    background: rgb(18, 30, 42);
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    margin: 0 5px 5px 0;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+.menuChips {
+    min-width: 46px;
+    background: #fff;
+    color: rgb(18, 30, 42);
+    text-align: center;
+    padding: 5px;
+    margin: 5px 5px 0 0;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+.green_button:hover {
+    background-color: #19b600;
+}
+
+.green_button:active {
+    background-color: #158a00;
+}
+
+.red_button:hover {
+    background-color: #c41c1c;
+    color: white;
+}
+
+.red_button:active {
+    background-color: #a41919;
+    color: white;
+}
+
+.botTyping .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+.bottom_body {
+    min-height: 5.8vh;
+    min-width: 22vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-bottom-left-radius: 0.7vw;
+    border-bottom-right-radius: 0.7vw;
+}
+
+.send_button {
+    font-size: 2.2vh;
+    min-height: 4.5vh;
+    min-width: 3vw;
+    background-color: white;
+    /*border-style: none;*/
+    border: 1px solid #919191;
+    border-left-style: none;
+    border-radius: 0 0 0.5vw 0;
+}
+
+.send_button > i {
+    margin-left: 0.3vw;
+}
+
+.send_button > i:hover {
+    color: #0069ff;
+}
+
+.send_button > i:active {
+    color: #0053d0;
+}
+
+.send_text {
+    font-size: 1.8vh;
+    min-height: 4vh;
+    min-width: 17.7vw;
+    background-color: white;
+    /*border-style: none;*/
+    border-radius: 0 0 0 0.5vw;
+    padding-left: 0.3vw;
+    border: 1px solid #919191;
+    border-right-style: none;
+}
+
+.send_text_extra {
+    border-radius: 0.5vw;
+}
+
+.bottom_body > input:focus {
+    outline: none;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    /*font-family: 'Poppins', sans-serif;*/
+    /*font-size: 14px;*/
+}
+
+.modal_content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #494949;
+    width: 50%;
+}
+
+.modal_button {
+    float: right;
+    min-width: 60px;
+    background: #1ad200;
+    color: rgb(18, 30, 42);
+    text-align: center;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.weather_card_container {
+    display: none;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
+    background-color: #222831;
+    color: #ffffff;
+    height: 500px;
+    margin-top: 10px;
+}
+
+.weather-side {
+    position: relative;
+    height: 105%;
+    margin: -13px 0 0 13px;
+    border-radius: 3px;
+    min-width: 15.6vw;
+    background-image: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+    -webkit-box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+    float: left;
+}
+
+.other-details-side {
+    position: relative;
+    width: 647px;
+    height: 500px;
+    left: 313px;
+    top: 0;
+}
+
+.current-card {
+    position: absolute;
+    width: 255px;
+    height: 140px;
+    left: 20px;
+    top: 23px;
+}
+
+.throughout-card {
+    position: absolute;
+    width: 255px;
+    height: 204px;
+    left: 20px;
+    top: 176px;
+}
+
+.location-card {
+    position: absolute;
+    width: 255px;
+    height: 111px;
+    left: 20px;
+    top: 393px;
+}
+
+.heading-weather-side {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.current-cond {
+    position: absolute;
+    width: 265px;
+    height: 24px;
+    left: 0;
+    top: 0;
+}
+
+.throughout-cond {
+    position: absolute;
+    width: 209px;
+    height: 24px;
+    left: 0;
+    top: 0;
+}
+
+.subheading-weather-side {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.current-temp {
+    position: absolute;
+    width: 80px;
+    height: 15px;
+    left: 0;
+    top: 26px;
+}
+
+.current-feels {
+    position: absolute;
+    width: 61px;
+    height: 15px;
+    left: 0;
+    top: 83px;
+}
+
+.throughout-temp {
+    position: absolute;
+    width: 80px;
+    height: 15px;
+    left: 0;
+    top: 126px;
+}
+
+.throughout-feels {
+    position: absolute;
+    width: 61px;
+    height: 15px;
+    left: 137px;
+    top: 126px;
+}
+
+.weather-main-digit {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.current-temp-digit {
+    position: absolute;
+    width: 87px;
+    height: 42px;
+    left: 0;
+    top: 41px;
+}
+
+.current-feels-digit {
+    position: absolute;
+    width: 77px;
+    height: 43px;
+    left: 0;
+    top: 98px;
+}
+
+.throughout-temp-digit {
+    position: absolute;
+    width: 81px;
+    height: 43px;
+    left: 0;
+    top: 141px;
+}
+
+.throughout-feels-digit {
+    position: absolute;
+    width: 75px;
+    height: 43px;
+    left: 137px;
+    top: 141px;
+}
+
+.current-icon {
+    position: absolute;
+    width: 93px;
+    height: 67px;
+    left: 138px;
+    top: 31px;
+}
+
+.throughout-icon {
+    position: absolute;
+    width: 93px;
+    height: 67px;
+    left: 0;
+    top: 26px;
+}
+
+.weather-side-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.current-words {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    left: 130px;
+    top: 100px;
+}
+
+.throughout-word {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    left: 0;
+    top: 95px;
+}
+
+.sunrise-icon {
+    position: absolute;
+    right: 14px;
+    top: 33px;
+}
+
+.sunset-icon {
+    position: absolute;
+    right: 12px;
+    top: 72px;
+}
+
+.sunrise-time {
+    position: absolute;
+    width: 65px;
+    height: 24px;
+    left: 125px;
+    top: 41px;
+    justify-content: flex-end;
+}
+
+.sunset-time {
+    position: absolute;
+    width: 65px;
+    height: 24px;
+    left: 125px;
+    top: 79px;
+    justify-content: flex-end;
+}
+
+
+.temp-max-min {
+    position: absolute;
+    width: 106px;
+    height: 21px;
+    left: 0;
+    top: 183px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.max-arrow-temp {
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+}
+
+.max-temp-digit {
+    position: absolute;
+    width: 41px;
+    height: 21px;
+    left: 11px;
+    top: 0;
+}
+
+.min-arrow-temp {
+    position: absolute;
+    right: 39px;
+    bottom: 3px;
+}
+
+.min-temp-digit {
+    position: absolute;
+    width: 38px;
+    height: 21px;
+    left: 68px;
+    top: 0;
+}
+
+.feels-max-min {
+    position: absolute;
+    width: 106px;
+    height: 21px;
+    left: 135px;
+    top: 183px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.max-arrow-feels {
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+}
+
+.max-feels-digit {
+    position: absolute;
+    width: 41px;
+    height: 21px;
+    left: 11px;
+    top: 0;
+}
+
+.min-arrow-feels {
+    position: absolute;
+    right: 39px;
+    bottom: 3px;
+}
+
+.min-feels-digit {
+    position: absolute;
+    width: 38px;
+    height: 21px;
+    left: 68px;
+    top: 0;
+}
+
+.location-icon {
+    position: absolute;
+    width: 13px;
+    height: 18px;
+    left: 0;
+    top: 50px;
+}
+
+.location-details {
+    position: absolute;
+    width: 228px;
+    height: 74px;
+    left: 19px;
+    top: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    display: flex;
+    align-items: flex-end;
+    color: #FFFFFF;
+}
+
+.location-sub-details {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.coordinates_pos {
+    position: absolute;
+    width: 130px;
+    height: 12px;
+    left: 19px;
+    top: 75px;
+}
+
+.timezone_pos {
+    position: absolute;
+    width: 156px;
+    height: 12px;
+    left: 19px;
+    top: 87px;
+}
+
+.datetime_pos {
+    position: absolute;
+    width: 70px;
+    height: 12px;
+    left: 19px;
+    top: 99px;
+}
+
+.icon-desc {
+    position: absolute;
+    width: 345px;
+    height: 15px;
+    left: 21px;
+    top: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.other-weather-details {
+    position: absolute;
+    width: 585px;
+    height: 360px;
+    left: 20px;
+    top: 54px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.other_headings {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.other_details {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.humidity_heading {
+    position: absolute;
+    width: 111px;
+    height: 15px;
+    left: 0;
+    top: 0;
+}
+
+.humidity_details {
+    position: absolute;
+    left: 0;
+    top: 27px;
+}
+
+.solar_energy_heading {
+    position: absolute;
+    width: 79px;
+    height: 15px;
+    left: 177px;
+    top: 0;
+}
+
+.solar_energy_details {
+    position: absolute;
+    left: 177px;
+    top: 27px;
+}
+
+.wind_speed_heading {
+    position: absolute;
+    width: 76px;
+    height: 15px;
+    left: 350px;
+    top: 0;
+}
+
+.wind_speed_details {
+    position: absolute;
+    left: 350px;
+    top: 27px;
+}
+
+.cloud_cover_heading {
+    position: absolute;
+    width: 75px;
+    height: 15px;
+    left: 508px;
+    top: 0;
+}
+
+.cloud_cover_details {
+    position: absolute;
+    left: 508px;
+    top: 27px;
+}
+
+.pressure_heading {
+    position: absolute;
+    left: 0;
+    top: 95px;
+}
+
+.pressure_details {
+    position: absolute;
+    left: 0;
+    top: 122px;
+}
+
+.solar_radi_heading {
+    position: absolute;
+    width: 94px;
+    height: 15px;
+    left: 177px;
+    top: 95px;
+
+}
+
+.solar_radi_details {
+    position: absolute;
+    left: 177px;
+    top: 122px;
+}
+
+.wind_gust_heading {
+    position: absolute;
+    width: 66px;
+    height: 15px;
+    left: 350px;
+    top: 95px;
+}
+
+.wing_gust_details {
+    position: absolute;
+    left: 350px;
+    top: 122px;
+}
+
+.snow_heading {
+    position: absolute;
+    width: 35px;
+    height: 15px;
+    left: 508px;
+    top: 95px;
+}
+
+.snow_details {
+    position: absolute;
+    left: 508px;
+    top: 122px;
+}
+
+.visibility_heading {
+    position: absolute;
+    width: 53px;
+    height: 15px;
+    left: 0;
+    top: 190px;
+}
+
+.visibility_details {
+    position: absolute;
+    left: 0;
+    top: 217px;
+}
+
+.uv_heading {
+    position: absolute;
+    width: 56px;
+    height: 15px;
+    left: 177px;
+    top: 190px;
+}
+
+.uv_details {
+    position: absolute;
+    left: 177px;
+    top: 217px;
+}
+
+.wind_dir_heading {
+    position: absolute;
+    width: 95px;
+    height: 15px;
+    left: 350px;
+    top: 190px;
+}
+
+.wind_dir_details {
+    position: absolute;
+    left: 350px;
+    top: 217px;
+}
+
+.wind_dir_exp{
+    position: absolute;
+    width: 95px;
+    height: 22px;
+    left: 351px;
+    top: 267px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+.snow_depth_heading {
+    position: absolute;
+    width: 77px;
+    height: 15px;
+    left: 508px;
+    top: 190px;
+}
+
+.snow_depth_details {
+    position: absolute;
+    left: 508px;
+    top: 217px;
+}
+
+.precip_heading {
+    position: absolute;
+    width: 80px;
+    height: 15px;
+    left: 0;
+    top: 285px;
+
+}
+
+.precip_details {
+    position: absolute;
+    left: 0;
+    top: 312px;
+}
+
+.precip_type_heading {
+    position: absolute;
+    width: 114px;
+    height: 15px;
+    left: 177px;
+    top: 285px;
+}
+
+.precip_type_details {
+    position: absolute;
+    left: 177px;
+    top: 312px;
+}
+
+.moon_icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 336px;
+    top: 310px;
+}
+
+.moon_name {
+    position: absolute;
+    width: 129px;
+    height: 18px;
+    left: 398px;
+    top: 324px;
+}
+
+.weather_description {
+    position: absolute;
+    width: 521px;
+    height: 36px;
+    left: 20px;
+    bottom: 20px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .rectangle {
+        min-width: 100vw;
+        min-height: 100vh;
+        border-radius: 0;
+    }
+
+    .upper_body {
+        font-size: 3vh;
+        min-height: 9vh;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .upper_body_name > h3 {
+        margin: 0 0 0 2vw;
+    }
+
+    .reset_button {
+        border-radius: 4vmin;
+    }
+
+    .last_button {
+        margin: 1vh 3vw 0 0;
+    }
+
+    .bot_icon {
+        margin: 0 0 0 3vw;
+    }
+
+    .middle_body {
+        min-height: 81vh;
+        padding: 1vh 2vw;
+    }
+
+    .bottom_body {
+        min-height: 9vh;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .send_text {
+        font-size: 2.5vh;
+        min-width: 78.7vw;
+        min-height: 5.2vh;
+        padding: 1vh 0 0 2vw;
+        border-radius: 0 0 0 1.8vw;
+    }
+
+    .send_button {
+        font-size: 17px;
+        min-width: 15vw;
+        min-height: 6.5vh;
+        border-radius: 0 0 1.8vw 0;
+    }
+
+    .send_button > i {
+        margin-left: 2vw;
+    }
+
+    .send_button > i:hover {
+        color: #0069ff;
+    }
+
+    .send_button > i:active {
+        color: #0053d0;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <title>Chat Frame</title>
+    <script src="https://kit.fontawesome.com/6c73464d06.js" crossorigin="anonymous"></script>
+</head>
+<body class="container" style="background-color: #263238">
+    <div class="rectangle" id="todo_form">
+        <div class="upper_body">
+            <div class="upper_body_name">
+                <div class="bot_icon">
+                    <img src="{{ url_for('static', filename='weather_bot.svg')}}" alt="">
+                </div>
+                <h3>Weather Bot </h3>️
+            </div>
+            <div>
+                <button class="reset_button" type="button" title="Restart Chat" id="restart_button" ><i class="fa-solid fa-arrow-rotate-left"></i></button>
+                <button class="reset_button" type="button" title="Clear Chat" id="clear_button" ><i class="fa-solid fa-eraser"></i></button>
+                <button class="reset_button last_button" type="button" title="Close Chat" id="close_button" ><i class="fa-solid fa-power-off"></i></button>
+            </div>
+        </div>
+        <div class="middle_body" id="middle_body">
+
+        </div>
+        <div class="bottom_body">
+            <label for="input_text"></label><input class="send_text" type="text" id="input_text" name="inout_text" autocomplete="off" placeholder="Type your message here..."/>
+            <button class="send_button" id="submit_button" type="button" ><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>
